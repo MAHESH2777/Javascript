@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+</head>
+<body>
+<input type="button" onclick="Team()" value="click here">
+<input type="button" onclick="cube(2)" value="Calculate">
+</body>
+<script>
+	function hello(){
+		document.write("Hi Team");
+	}
+	hello();
+
+	document.write("<br>");
+
+	function Message(name){
+		alert("hi"+name);
+	}
+	Message("Killer");
+
+	document.write("<br>");
+
+	function Team(){
+		alert("Please Learn Js");
+}
+	document.write("<br>");
+
+	function sum(a,b){
+		return a+b;
+	}		
+	console.log(sum(5,6));
+
+	document.write("<br>");
+
+	function md (fname,lname){
+		alert("Hello"+ fname+""+lname);
+	}
+	md('madhu','sam');
+	md('viddu','munny');
+
+	document.write("<br>");
+
+	function cube (a) {
+		
+		alert(a*a*a);
+	}
+
+	document.write("<br>");
+
+	var add=function(val1,val2){
+		return val1+val2;
+	}
+	var res=add(10,20);
+	document.write(res);
+
+	document.write("<br>");
+
+	function hi(){
+		document.write("javascript");
+		
+		function team(){
+			document.write("learn");
+		}
+		team();
+	}
+	document.write("javascript");
+	hi();
+
+
+
+
+</script>
+</html>

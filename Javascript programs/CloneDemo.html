@@ -1,0 +1,23 @@
+<html>
+	<script>
+		
+		function Customer(custId,pnNO,pid)
+		{
+			this.custId=custId;
+			this.pnNO=pnNO;
+			this.pid=pid;
+		}
+		var c1=new Customer(789,12345,1209);
+		var c2=new Customer();
+		c2.custId=c1.custId;
+		c2.pnNO=c1.pnNO;
+		c2.pid=c1.pid;
+		document.writeln(c2.custId+"  "+c2.pnNO+"  "+c2.pid);
+		
+	</script>
+</html>
+
+
+
+
+

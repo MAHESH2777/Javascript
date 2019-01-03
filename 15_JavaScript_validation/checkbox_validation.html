@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title> Radio Button Validation </title>
+</head>
+<body>
+<form name="myForm" onsubmit="return myFun()">
+
+		 <input type="checkbox" name="course"  > UI <br>
+		 <input type="checkbox" name="course"  > Java <br>
+		  <input type="checkbox" name="course" > Digital Marketing<br>
+<span id="Message"> </span>
+<br>
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+<script>
+function myFun() {
+	
+	var a = document.myForm.course;
+	for(i=0; i<a.length; i++) {
+		if(a[i].checked == true)
+			return true;
+	}
+	document.getElementById("Message").innerHTML = "Please select any course ";
+	return false;
+
+}
+
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	</head>
+	<body></body>
+	<script>
+		var a=new Date();
+		document.write(a);
+		document.write(a.getDate());
+		document.write("<br>");
+		document.write(a.getDay());
+		document.write("<br>");
+		document.write(a.getTime());
+		document.write("<br>");
+		document.write(a.getMonth()+1);
+		
+		document.write("<br>");
+		document.write('different formats of time:');
+		
+		document.write("<br>");
+		var b=new Date();
+		var k=b.getDate();
+		var l=b.getMonth()+1;
+		var Y=b.getFullYear();
+		document.write(k+"/"+l+"/"+ Y);
+		document.write("<br>");
+		
+		document.write(k+"-"+l+"-"+ Y);
+		
+		document.write("<br>");
+		document.write(Y+"-"+l+"-"+ k);
+		
+		document.write("<br>");
+		document.write(l+"/"+k+"/"+Y);
+		
+		document.write("<br>");
+		
+		var c=b.getHours();
+		var d=b.getMinutes();
+		var e=b.getSeconds();
+		var f=b.getMilliseconds();
+		document.write(c+"-"+d+"-"+e+"-"+f);
+
+		
+	</script>
+</html>

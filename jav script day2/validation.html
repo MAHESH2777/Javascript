@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	</style>
+</head>
+<body>
+<form>
+Name:<input type="text" id="name">
+<input type="button" value="submit" onclick="validation()">
+<p id="demo"></p>
+</form>
+</body>
+<script>
+function validation(){
+var a=document.getElementById("name").value;
+if(a.length=='0'){
+document.getElementById('demo').innerHTML="Please Enter Value";
+}
+
+else(a.length <= 5){
+document.getElementById('demo').innerHTML="Please Enter Five digit Value ";
+}
+
+}
+
+</script>
+</html>

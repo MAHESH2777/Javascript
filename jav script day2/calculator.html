@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	#demo{
+		border: 5px solid green;
+	}
+</style>
+</head>
+<body>
+Num1:<input type="text" id="num1">
+Num2:<input type="text" id="num2">
+<input type="button" value="+" onclick="add()">
+<input type="button" value="-" onclick="sub()">
+<input type="button" value="*" onclick="mul()">
+<input type="button" value="/" onclick="div()">
+
+<h1 id="demo"></h1>
+</body>
+<script>
+	function add(){
+		var a=document.getElementById('num1').value;
+		var b=document.getElementById('num2').value;
+		var c=Number(a) + Number(b);
+		document.getElementById("demo").innerHTML=c;
+	}
+	function sub(){
+		var a=document.getElementById('num1').value;
+		var b=document.getElementById('num2').value;
+		var c=Number(a) - Number(b);
+		document.getElementById("demo").innerHTML=c;
+	}
+	function mul(){
+		var a=document.getElementById('num1').value;
+		var b=document.getElementById('num2').value;
+		var c=Number(a) * Number(b);
+		document.getElementById("demo").innerHTML=c;
+	}
+	function div(){
+		var a=document.getElementById('num1').value;
+		var b=document.getElementById('num2').value;
+		var c=Number(a) / Number(b);
+		document.getElementById("demo").innerHTML=c;
+	}
+	</script>
+</html>

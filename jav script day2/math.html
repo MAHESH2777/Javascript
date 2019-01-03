@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math</title>
+</head>
+<body>
+<input type="button" onclick="generatepassword()">
+<p id="demo"></p>	
+</body>
+<script>
+var pow=Math.pow(2,3);
+document.write(pow);
+
+document.write("<br>");
+
+var r=Math.round(3.5);
+document.write(r);
+
+document.write("<br>");
+
+var f=Math.floor(3.6);
+document.write(f);
+
+document.write("<br>");
+
+var c=Math.ceil(3.1);
+document.write(c);
+
+document.write("<br>");
+
+var d=Math.sqrt(2);
+document.write(d);
+
+document.write("<br>");
+
+var rr=Math.random()*10;
+document.write(rr);
+
+document.write("<br>");
+
+
+function generatepassword(){
+var length=8;
+var charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+var retval="";
+
+for(var i=0,n=charset.length;i<length;++i){
+	retval=retval+charset.charAt((Math.random()*n));
+}
+document.getElementById('demo').innerHTML=retval;
+}
+
+/*
+function generatepassword(){
+	var chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+	var string_length=8;
+	for(var i=0;i<string_length;i++){
+		var rnum=Math.floor(Math.random()*chars.length);
+		// randomstring=chars.substring(rnum,rnum+1); //
+	}
+	document.getElementById('demo').innerHTML=rnum;
+	}
+*/
+
+
+</script>
+</html>

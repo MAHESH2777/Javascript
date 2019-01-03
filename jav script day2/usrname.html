@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="username">
+<input type="button" value="submit" onclick="myfun()">
+<p id="demo"></p>
+<p id="username"></p>
+</body>
+<script>
+function myfun(){
+var correct=/^[A-Za-z]/;
+	var a=document.getElementById('username').value;
+	if(a ==''){
+		document.getElementById("demo").innerHTML='Please Enter Username';
+		return false;
+	}
+	if(a.length< 3){
+		document.getElementById("demo").innerHTML='Please Enter more than 3 values';
+		return false;
+	}
+	if(a.length> 20){
+		document.getElementById("demo").innerHTML='Please Enter Not more than 20 characters';
+		return false;
+	}
+	if(a.match(correct)){
+		true;
+	}
+	else{
+		document.getElementById('demo').innerHTML="Please Enter only alphabets";
+		return false;
+	}
+}	
+</script>	
+</html>

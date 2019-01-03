@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="mobilenum">
+<input type="button" value="submit" onclick="myfun()">
+<p id="demo"></p>
+<p id="username"></p>
+</body>
+<script>
+function myfun(){
+var correct=/^[0123456789]/;
+	var a=document.getElementById('mobilenum').value;
+	if(a ==''){
+		document.getElementById("demo").innerHTML='Please Enter Phone number';
+		return false;
+	}
+	if(a.length< 10){
+		document.getElementById("demo").innerHTML='Please Enter 10 digit  number';
+		return false;
+	}
+	if(a.length> 20){
+		document.getElementById("demo").innerHTML='please Enter below than 20 digit Mobile number only';
+		return false;
+	}
+	if(a.match(correct)){
+		true;
+	}
+	else{
+		document.getElementById('demo').innerHTML="Please Enter only numbers";
+		return false;
+	}
+	/*
+	if(a.charAt(0)== '6' || '7' || '9' || '8'){
+		true;
+	}
+	else{
+		document.getElementById('demo').innerHTML='Please Enter Your Number Starts with 6,7 or 9';
+		return false;
+	}
+	*/
+if(a.indexOf('7') <= 0 || a.indexOf('8') <= 0 || a.indexOf('9') <= 0 ){
+	true;
+	}
+	else{
+		document.getElementById('demo').innerHTML='Please Enter Your Number with 9,8,7 only';
+		return false;
+	}
+}	
+</script>	
+</html>

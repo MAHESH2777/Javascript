@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title> Username Validation </title>
+</head>
+<body>
+<form name="myForm" onsubmit="return myFun()">
+UserName:  <input type="text" id="username" value="">
+<span id="Message"> </span>
+<br>
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+<script>
+function myFun() {
+	var correct_way = /^[A-Za-z]+$/;
+	var a = document.getElementById("username").value;   
+	if(a == "") {  
+		document.getElementById("Message").innerHTML ="Please user name ";
+		return false;
+	}
+	
+	if(a.length<3) {
+		document.getElementById("Message").innerHTML ="Please Enter three characters ";
+		return false;
+	}
+	
+	if(a.length>20) {
+		document.getElementById("Message").innerHTML ="Please Enter less than 20 characters ";
+		return false;
+	}
+	if(a.match(correct_way))
+		true;
+	else {
+		document.getElementById("Message").innerHTML="Only alphabets allowed";
+		return false;
+	}
+
+}
+
+</script>
+</html>
